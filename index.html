@@ -150,12 +150,12 @@
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
-                                <i class="fas fa-filter"></i> Status
+                                <i class="fas fa-filter"></i> Cartão
                             </h3>
                             <select class="prod-select prod-js-handle-table" id="prod-status-filter">
                                 <option value="all">Todas</option>
-                                <option value="active">Ativas</option>
-                                <option value="inactive">Inativas</option>
+                                <option value="active">Ativo</option>
+                                <option value="inactive">Inativo</option>
                             </select>
                         </div>
                     </div>
@@ -173,8 +173,8 @@
                                 <th class="prod-table-cell prod-align-left">Integrações</th>
                                 <!-- Mudado de 'prod-align-right' para 'prod-align-left' -->
                                 <th class="prod-table-cell prod-align-left">Data de Criação</th>
-                                <th class="prod-table-cell prod-align-left">Última Atualização</th>
-                                <th class="prod-table-cell prod-align-left">Status</th>
+                                <th class="prod-table-cell prod-align-left">Última tarfa</th>
+                                <th class="prod-table-cell prod-align-left">Concilia Cartão</th>
                             </tr>
                         </thead>
 
@@ -222,7 +222,7 @@
                 name: "10539433000173",
                 category: "Itaú",
                 price: 154000,
-                integracoes: "Concilia Cartão",  // Novo campo com texto
+                integracoes: "Integra Mister",  // Novo campo com texto
                 description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
                 stocked: true,
                 created_at: "2025/01/25",
@@ -247,7 +247,7 @@
                 name: "81062945000130",
                 category: "Bradesco",
                 price: 124800,
-                integracoes: "Concilia Cartão",  // Novo campo com texto
+                integracoes: "Integra Mister",  // Novo campo com texto
                 stocked: false,
                 created_at: "2024/17/04",
                 updated_at: "2021/6/15",
@@ -259,7 +259,7 @@
                 name: "21576936000135",
                 category: "Bradesco",
                 price: 124800,
-                integracoes: "Concilia Cartão",  // Novo campo com texto
+                integracoes: "Integra Mister",  // Novo campo com texto
                 stocked: true,
                 created_at: "2024/17/04",
                 updated_at: "2021/6/15",
@@ -589,8 +589,8 @@ applyFilters() {
                     <td class="prod-table-cell prod-align-left">${product.updated_at}</td>
                     <td class="prod-table-cell prod-align-left">
                     ${product.stocked
-                                ? `<span style="color: #00cc00; font-weight: bold;"><i class="fas fa-check-circle"></i>${twoSpace}Ativa</span>`
-                                : `<span style="color: #ff0000; font-weight: bold;"><i class="fas fa-minus-circle"></i>${twoSpace}Inativa</span>`
+                                ? `<span style="color: #00cc00; font-weight: bold;"><i class="fas fa-check-circle"></i>${twoSpace}Ativo</span>`
+                                : `<span style="color: #ff0000; font-weight: bold;"><i class="fas fa-minus-circle"></i>${twoSpace}Inativo</span>`
                             }
                     </td>
                 </tr>`,
