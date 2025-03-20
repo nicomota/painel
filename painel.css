@@ -481,6 +481,27 @@ section[role="application"] {
     color: #1D4ED8;
 }
 
+.infoemacoes{
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.contabilidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto; /* Empurra os elementos para a direita */
+    color: #ccc;
+}
 .prod-dropdown-heading {
     margin-bottom: 10px;
     font-size: 14px;
