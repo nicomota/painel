@@ -428,8 +428,8 @@ section[role="application"] {
 }
 
 .integration-icon {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     border-radius: 5px;
     object-fit: contain;
     transition: transform 0.2s ease, opacity 0.2s ease;
@@ -523,6 +523,12 @@ section[role="application"] {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.sistema{
+    color: #ccc;
+    font-weight: bold;
+    margin-top: -20px;
 }
 
 .informacoes {

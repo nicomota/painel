@@ -8,8 +8,6 @@ const products = [
         brand: "Mister Contador",
         name: "10539433000173",
         category: "Itaú",
-        price: 154000,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
         stocked: true,
         created_at: "",
         updated_at: "",
@@ -25,8 +23,6 @@ const products = [
         brand: "ENGETOTUS COMERCIO",
         name: "19887163000166",
         category: "Bradesco",
-        price: 120000,
-        description: "Outro modelo top de linha com ótimo desempenho.",
         stocked: false,
         created_at: "",
         updated_at: "",
@@ -42,8 +38,6 @@ const products = [
         brand: "Engenharia LTDA",
         name: "81062945000130",
         category: "Bradesco",
-        price: 124800,
-        description: "Lorem ipsum dolor sit amet.",
         stocked: false,
         created_at: "",
         updated_at: "",
@@ -59,8 +53,6 @@ const products = [
         brand: "3 Irmãos LTDA",
         name: "21576936000135",
         category: "Bradesco",
-        price: 124800,
-        description: "Excelente qualidade e durabilidade.",
         stocked: true,
         created_at: "",
         updated_at: "",
@@ -76,8 +68,6 @@ const products = [
         brand: "ENOK CONTABILIDADE",
         name: "09619794000140",
         category: "Bradesco",
-        price: "124800",
-        description: "Ótima escolha para usuários exigentes.",
         stocked: false,
         created_at: "",
         updated_at: "",
@@ -93,14 +83,12 @@ const products = [
         brand: "Amil Empresarial",
         name: "09619794000140",
         category: "Bradesco",
-        price: "124800",
-        description: "Ótima escolha para usuários exigentes.",
         stocked: false,
         created_at: "",
         updated_at: "",
         banks: ["MercadoPago", "Inter", "C6 Bank", "BTG Pactual", "MercadoPago"],
         integracoes: {
-            sieg: true,
+            sieg: false,
             bancaria: true,
             cartao: true
         }
@@ -484,8 +472,8 @@ class ProductTableApp {
                                 />
                             </div>
                         </td>
-                        <td class="prod-table-cell prod-align-left">${product.created_at}</td>
-                        <td class="prod-table-cell prod-align-left">${product.updated_at}</td>
+                        <td class="prod-table-cell prod-align-center style="width=200px">${product.created_at}</td>
+                        <td class="prod-table-cell prod-align-center style="width=200px">${product.updated_at}</td>
                         <td class="prod-table-cell prod-align-center notification-cell">
                             <div class="notification-bell">
                                 <i class="fas fa-bell"></i>
