@@ -351,7 +351,7 @@ section[role="application"] {
 
 /* Estilos para o carrossel na célula da tabela */
 .cell-carousel {
-    width: 120px;
+    width: 60px;
     /* Reduzido para mostrar apenas 2 bancos */
     height: 50px;
     /* Aumentado a altura */
@@ -390,11 +390,11 @@ section[role="application"] {
 }
 
 .cell-carousel-slide img {
-    max-width: 100%;
+    max-width: 55%;
     max-height: 35px;
     /* Imagem um pouco maior */
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .cell-carousel-btn {
@@ -412,7 +412,6 @@ section[role="application"] {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin: 0 8px;
 }
 
 .cell-carousel-btn:hover {

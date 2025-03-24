@@ -78,21 +78,6 @@ const products = [
             cartao: true
         }
     },
-    {
-        id: 6,
-        brand: "Amil Empresarial",
-        name: "09619794000140",
-        category: "Bradesco",
-        stocked: false,
-        created_at: "",
-        updated_at: "",
-        banks: ["MercadoPago", "Inter", "C6 Bank", "BTG Pactual", "MercadoPago"],
-        integracoes: {
-            sieg: false,
-            bancaria: true,
-            cartao: true
-        }
-    },
 ];
 
 /**
