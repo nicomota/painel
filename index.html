@@ -4,27 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bibliotecas CSS externas -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://kit.fontawesome.com/766b3aafc5.css" crossorigin="anonymous">
+    
+    <!-- CSS principal da aplicação -->
     <link rel="stylesheet" href="/painel.css">
+    
     <title>Empresas Cadastradas</title>
 </head>
 
 <body>
+    <!-- Menu lateral retrátil -->
     <div class="menu">
+        <!-- Logo e botão de toggle do menu -->
         <div class="logo">
             <div class="logo_nome">Olá, Nícolas...!</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
+        
+        <!-- Itens do menu -->
         <ul class="menu-lista">
+            <!-- Item de busca -->
             <li>
                 <i class='bx bx-search'></i>
                 <input type="text" placeholder="Procurar...">
                 <span class="tooltip">Procurar</span>
             </li>
+            
+            <!-- Item de início -->
             <li>
                 <a href="/index.html">
                     <i class='bx bx-grid-alt'></i>
@@ -32,6 +44,8 @@
                 </a>
                 <span class="tooltip">Inicio</span>
             </li>
+            
+            <!-- Item de cadastro de usuários -->
             <li>
                 <a href="">
                     <i class='bx bxs-user-plus'></i>
@@ -39,6 +53,8 @@
                 </a>
                 <span class="tooltip">Cadastro de Usuários</span>
             </li>
+            
+            <!-- Item de contabilidade -->
             <li>
                 <a href="">
                     <i class='bx bxs-keyboard'></i>
@@ -46,6 +62,8 @@
                 </a>
                 <span class="tooltip">Contabilide</span>
             </li>
+            
+            <!-- Item de meus dados -->
             <li>
                 <a href="">
                     <i class='bx bxs-user-rectangle'></i>
@@ -53,6 +71,8 @@
                 </a>
                 <span class="tooltip">Meus Dados</span>
             </li>
+            
+            <!-- Item de senha -->
             <li>
                 <a href="">
                     <i class='bx bxs-lock-alt'></i>
@@ -60,6 +80,8 @@
                 </a>
                 <span class="tooltip">Senha</span>
             </li>
+            
+            <!-- Item de sair -->
             <li>
                 <a href="">
                     <i class='bx bxs-exit'></i>
@@ -67,17 +89,27 @@
                 </a>
                 <span class="tooltip">Sair</span>
             </li>
+            
+            <!-- Logo na parte inferior do menu -->
             <div class="logo">
-                <img class="icone" src="/img/mc-horiz.png" style="width: 200px;" alt="">
+                <img class="icone" src="/img/mc-horiz.png" style="width: 200px;" alt="Logo">
             </div>
         </ul>
     </div>
 
+    <!-- Conteúdo principal -->
     <section class="home-section">
+        <!-- Cabeçalho da página -->
         <header>
-            <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">Meus
-                Cursos</button>
+            <!-- Botão de cursos -->
+            <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">
+                Meus Cursos
+            </button>
+            
+            <!-- Link de ajuda -->
             <a href="" style="margin: 1rem; color: white;">Precisa de ajuda? Clique aqui...</a>
+            
+            <!-- Barra de pesquisa -->
             <section role="search">
                 <form action="#" method="get">
                     <div class="form-inline">
@@ -86,35 +118,49 @@
                     </div>
                 </form>
             </section>
+            
+            <!-- Seção de aplicação (filtros e botões) -->
             <section role="application">
-                <nav class="navbar-top">
-                </nav>
+                <nav class="navbar-top"></nav>
+                
+                <!-- Dropdown de Razão Social/CNPJ -->
                 <div class="btn-group" role="group">
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Razão Social
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item " href="#">CNPJ</a>
+                        <a class="dropdown-item" href="#">CNPJ</a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary"
-                    style="background-color: #ffffff; color: #011eda;">Pesquisar</button>
+                
+                <!-- Botão de pesquisa -->
+                <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">
+                    Pesquisar
+                </button>
             </section>
         </header>
 
-        <!-- Início da Tabela de Produtos (Integração) -->
+        <!-- Container da tabela de empresas -->
         <div class="prod-container" style="margin-top: 30px;">
-            <div class="contabilidade" style="display: flex; display: flex; justify-content: space-between;">
+            <!-- Cabeçalho com título e informações da contabilidade -->
+            <div class="contabilidade" style="display: flex; justify-content: space-between;">
                 <h1 class="prod-heading-lv1">Contabilidade Luiz Corrêa</h1>
-                <!-- <p class="infoemacoes">Sitema: Dominio</p>
+                <!-- Informações adicionais (comentadas) -->
+                <!-- 
+                <p class="infoemacoes">Sitema: Dominio</p>
                 <p class="infoemacoes">CNPJ Contratados: 20</p>
                 <p class="infoemacoes">CNPJS ativos: 10</p>
                 <p class="infoemacoes">Integração Bancária <span>&#9745;</span></p>
-                <p class="infoemacoes">Integração de Notas <span>&#9745;</span> -->
+                <p class="infoemacoes">Integração de Notas <span>&#9745;</span>
+                -->
             </div>
+            
+            <!-- Aplicação da tabela de produtos/empresas -->
             <div class="prod-table-app" id="product-table-app">
+                <!-- Controles da tabela (filtros) -->
                 <div class="prod-table-handler">
+                    <!-- Filtro de empresa -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
@@ -122,10 +168,12 @@
                             </h3>
                             <select class="prod-select prod-js-handle-table prod-js-filter" id="prod-filter-brand">
                                 <option value="all">Todas</option>
+                                <!-- Opções adicionais serão geradas via JavaScript -->
                             </select>
                         </div>
                     </div>
 
+                    <!-- Filtro de busca por ID -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
@@ -136,7 +184,7 @@
                         </div>
                     </div>
 
-                    <!-- HTML do dropdown modificado - Agora é um filtro de integrações -->
+                    <!-- Filtro de integrações -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
@@ -151,6 +199,7 @@
                         </div>
                     </div>
 
+                    <!-- Filtro de status de tickets -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
@@ -164,10 +213,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.prod-table-handler -->
 
+                <!-- Wrapper da tabela com scroll vertical -->
                 <div class="prod-table-wrapper">
+                    <!-- Tabela de empresas -->
                     <table class="prod-table" id="prod-table">
+                        <!-- Cabeçalho da tabela -->
                         <thead>
                             <tr class="prod-table-head">
                                 <th class="prod-table-cell prod-align-right">ID</th>
@@ -175,40 +226,41 @@
                                 <th class="prod-table-cell prod-align-left">CNPJ</th>
                                 <th class="prod-table-cell prod-align-left">Banco</th>
                                 <th class="prod-table-cell prod-align-left">Integrações</th>
-                                <th class="prod-table-cell prod-align-left">Data de Criação</th>
-                                <th class="prod-table-cell prod-align-left">Última tarefa</th>
-                                <th class="prod-table-cell prod-align-left">Tickets</th>
+                                <th class="prod-table-cell prod-align-left">Em teste..</th>
+                                <th class="prod-table-cell prod-align-left">Em teste..</th>
+                                <th class="prod-table-cell prod-align-center">Tickets</th>
                             </tr>
                         </thead>
 
+                        <!-- Corpo da tabela -->
                         <tbody>
                             <!-- Dados serão carregados via JavaScript -->
                         </tbody>
                     </table>
 
+                    <!-- Mensagem quando não há resultados -->
                     <div class="prod-no-results prod-hidden" id="prod-no-results">
                         <p class="prod-no-results-message">Nenhum resultado encontrado.</p>
                     </div>
-                    <!-- /#prod-no-results -->
                 </div>
-                <!-- /.prod-table-wrapper -->
             </div>
-            <!-- /.prod-table-app -->
         </div>
-        <!-- /.prod-container -->
-        <!-- Fim da Tabela de Produtos -->
     </section>
-    <!-- Scripts -->
+
+    <!-- Scripts de bibliotecas externas -->
     <script src="https://kit.fontawesome.com/766b3aafc5.js" crossorigin="anonymous"></script>
-    <!-- Importante: Usar apenas uma versão do jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    
+    <!-- Script Chart.js (removido se não estiver sendo usado) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    
+    <!-- Script principal da aplicação -->
     <script src="/painel.js"></script>
 </body>
 

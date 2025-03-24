@@ -344,19 +344,22 @@ section[role="application"] {
 }
 
 
-.list{
+.list {
     margin: 2rem;
 }
 
 
 /* Estilos para o carrossel na célula da tabela */
 .cell-carousel {
-    width: 120px; /* Reduzido para mostrar apenas 2 bancos */
-    height: 50px; /* Aumentado a altura */
+    width: 120px;
+    /* Reduzido para mostrar apenas 2 bancos */
+    height: 50px;
+    /* Aumentado a altura */
     position: relative;
     overflow: hidden;
     border-radius: 5px;
-    margin: 8px 0; /* Aumentado o margin para dar mais espaço */
+    margin: 8px 0;
+    /* Aumentado o margin para dar mais espaço */
 }
 
 .cell-carousel-track {
@@ -366,7 +369,8 @@ section[role="application"] {
 }
 
 .cell-carousel-slide {
-    flex: 0 0 60px; /* Largura fixa para cada slide */
+    flex: 0 0 60px;
+    /* Largura fixa para cada slide */
     height: 100%;
     transition: all 0.3s ease;
     opacity: 0.6;
@@ -380,13 +384,15 @@ section[role="application"] {
 
 .cell-carousel-slide.active {
     opacity: 1;
-    transform: scale(1.2); /* Ênfase maior ao ícone ativo */
+    transform: scale(1.2);
+    /* Ênfase maior ao ícone ativo */
     z-index: 2;
 }
 
 .cell-carousel-slide img {
     max-width: 100%;
-    max-height: 35px; /* Imagem um pouco maior */
+    max-height: 35px;
+    /* Imagem um pouco maior */
     object-fit: contain;
     border-radius: 10px;
 }
@@ -416,7 +422,8 @@ section[role="application"] {
 /* Estilos para ícones de integração */
 .integration-icons {
     display: flex;
-    justify-content: flex-start; /* Alterado de center para flex-start */
+    justify-content: flex-start;
+    /* Alterado de center para flex-start */
     gap: 10px;
 }
 
@@ -504,7 +511,7 @@ section[role="application"] {
     color: #1D4ED8;
 }
 
-.infoemacoes{
+.infoemacoes {
     margin-bottom: 40px;
     font-size: 15px;
     font-weight: bold;
@@ -522,9 +529,11 @@ section[role="application"] {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: auto; /* Empurra os elementos para a direita */
+    margin-left: auto;
+    /* Empurra os elementos para a direita */
     color: #ccc;
 }
+
 .prod-dropdown-heading {
     margin-bottom: 10px;
     font-size: 14px;
@@ -575,7 +584,7 @@ section[role="application"] {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+
 }
 
 .prod-table-app {
@@ -617,6 +626,7 @@ section[role="application"] {
     box-shadow: 0 2px 0 0 #1D4ED8;
 }
 
+/* Estilo base para todas as linhas da tabela */
 .prod-table-row {
     line-height: 48px;
     color: #111;
@@ -633,6 +643,54 @@ section[role="application"] {
     background-color: #eee;
 }
 
+/* Efeito hover com suave elevação */
+.prod-table-row:hover {
+    background-color: #e8f0fe;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(22, 31, 160, 0.1);
+    z-index: 1;
+}
+
+/* Efeito quando a linha está selecionada/ativa */
+.prod-table-row.selected {
+    background-color: #d4e3fb !important;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(29, 78, 216, 0.15);
+    z-index: 2;
+    border-left: 4px solid #1D4ED8;
+}
+
+/* Efeito de animação quando clica (feedback visual) */
+.prod-table-row:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+}
+
+/* Ajustes para células dentro de linhas selecionadas */
+.prod-table-row.selected .prod-table-cell {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Animação sutil de pulso para destacar a linha após seleção */
+@keyframes rowPulse {
+    0% {
+        box-shadow: 0 6px 12px rgba(29, 78, 216, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 6px 12px rgba(29, 78, 216, 0.25);
+    }
+
+    100% {
+        box-shadow: 0 6px 12px rgba(29, 78, 216, 0.15);
+    }
+}
+
+.prod-table-row.selected {
+    animation: rowPulse 2s ease-in-out;
+}
 
 
 
@@ -652,4 +710,175 @@ section[role="application"] {
 .prod-no-results-message {
     font-size: 22px;
     color: #929292;
+}
+
+
+
+/* Estilos para o sino de notificação */
+.notification-bell {
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.notification-bell i {
+    color: var(--blue-primary);
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.notification-bell:hover i {
+    transform: rotate(15deg);
+}
+
+/* Badge de notificação */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff3b30;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Animação de pulso para o badge */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.notification-badge.has-new {
+    animation: pulse 1.5s infinite;
+}
+
+
+
+/* Estilos para o popup de notificação */
+.notification-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 1000;
+    max-width: 500px;
+    width: 90%;
+    display: none;
+}
+
+.notification-popup.visible {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -48%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--blue-primary);
+}
+
+.close-notification {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.2s;
+}
+
+.close-notification:hover {
+    color: #333;
+}
+
+.notification-content {
+    margin-bottom: 15px;
+}
+
+.notification-message {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.notification-time {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+}
+
+.notification-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.notification-btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.notification-btn-primary {
+    background-color: var(--blue-primary);
+    color: white;
+}
+
+.notification-btn-primary:hover {
+    background-color: #0016c0;
+}
+
+.notification-btn-secondary {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.notification-btn-secondary:hover {
+    background-color: #e5e5e5;
+}
+
+/* Overlay para fundo escurecido quando o popup estiver aberto */
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.notification-overlay.visible {
+    display: block;
 }
