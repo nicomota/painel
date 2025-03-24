@@ -4,30 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bibliotecas CSS externas -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://kit.fontawesome.com/766b3aafc5.css" crossorigin="anonymous">
+    
+    <!-- CSS principal da aplicação -->
     <link rel="stylesheet" href="/painel.css">
-    <!-- CSS da tabela de produtos -->
-    <style>
-    </style>
+    
     <title>Empresas Cadastradas</title>
 </head>
 
 <body>
+    <!-- Menu lateral retrátil -->
     <div class="menu">
+        <!-- Logo e botão de toggle do menu -->
         <div class="logo">
             <div class="logo_nome">Olá, Nícolas...!</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
+        
+        <!-- Itens do menu -->
         <ul class="menu-lista">
+            <!-- Item de busca -->
             <li>
                 <i class='bx bx-search'></i>
                 <input type="text" placeholder="Procurar...">
                 <span class="tooltip">Procurar</span>
             </li>
+            
+            <!-- Item de início -->
             <li>
                 <a href="/index.html">
                     <i class='bx bx-grid-alt'></i>
@@ -35,6 +44,8 @@
                 </a>
                 <span class="tooltip">Inicio</span>
             </li>
+            
+            <!-- Item de cadastro de usuários -->
             <li>
                 <a href="">
                     <i class='bx bxs-user-plus'></i>
@@ -42,6 +53,8 @@
                 </a>
                 <span class="tooltip">Cadastro de Usuários</span>
             </li>
+            
+            <!-- Item de contabilidade -->
             <li>
                 <a href="">
                     <i class='bx bxs-keyboard'></i>
@@ -49,6 +62,8 @@
                 </a>
                 <span class="tooltip">Contabilide</span>
             </li>
+            
+            <!-- Item de meus dados -->
             <li>
                 <a href="">
                     <i class='bx bxs-user-rectangle'></i>
@@ -56,6 +71,8 @@
                 </a>
                 <span class="tooltip">Meus Dados</span>
             </li>
+            
+            <!-- Item de senha -->
             <li>
                 <a href="">
                     <i class='bx bxs-lock-alt'></i>
@@ -63,6 +80,8 @@
                 </a>
                 <span class="tooltip">Senha</span>
             </li>
+            
+            <!-- Item de sair -->
             <li>
                 <a href="">
                     <i class='bx bxs-exit'></i>
@@ -70,17 +89,27 @@
                 </a>
                 <span class="tooltip">Sair</span>
             </li>
+            
+            <!-- Logo na parte inferior do menu -->
             <div class="logo">
-                <img class="icone" src="/img/mc-horiz.png" style="width: 200px;" alt="">
+                <img class="icone" src="/img/mc-horiz.png" style="width: 200px;" alt="Logo">
             </div>
         </ul>
     </div>
 
-    <section class="home-section">f
+    <!-- Conteúdo principal -->
+    <section class="home-section">
+        <!-- Cabeçalho da página -->
         <header>
-            <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">Meus
-                Cursos</button>
+            <!-- Botão de cursos -->
+            <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">
+                Meus Cursos
+            </button>
+            
+            <!-- Link de ajuda -->
             <a href="" style="margin: 1rem; color: white;">Precisa de ajuda? Clique aqui...</a>
+            
+            <!-- Barra de pesquisa -->
             <section role="search">
                 <form action="#" method="get">
                     <div class="form-inline">
@@ -89,36 +118,49 @@
                     </div>
                 </form>
             </section>
+            
+            <!-- Seção de aplicação (filtros e botões) -->
             <section role="application">
-                <nav class="navbar-top">
-                </nav>
+                <nav class="navbar-top"></nav>
+                
+                <!-- Dropdown de Razão Social/CNPJ -->
                 <div class="btn-group" role="group">
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Razão Social
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item " href="#">CNPJ</a>
+                        <a class="dropdown-item" href="#">CNPJ</a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary"
-                    style="background-color: #ffffff; color: #011eda;">Pesquisar</button>
+                
+                <!-- Botão de pesquisa -->
+                <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">
+                    Pesquisar
+                </button>
             </section>
         </header>
 
-        <!-- Início da Tabela de Produtos (Integração) -->
+        <!-- Container da tabela de empresas -->
         <div class="prod-container" style="margin-top: 30px;">
-            <div class="contabilidade" style="display: flex; display: flex; justify-content: space-between;">
+            <!-- Cabeçalho com título e informações da contabilidade -->
+            <div class="contabilidade" style="display: flex; justify-content: space-between;">
                 <h1 class="prod-heading-lv1">Contabilidade Luiz Corrêa</h1>
+                <!-- Informações adicionais (comentadas) -->
+                <!-- 
                 <p class="infoemacoes">Sitema: Dominio</p>
                 <p class="infoemacoes">CNPJ Contratados: 20</p>
                 <p class="infoemacoes">CNPJS ativos: 10</p>
                 <p class="infoemacoes">Integração Bancária <span>&#9745;</span></p>
                 <p class="infoemacoes">Integração de Notas <span>&#9745;</span>
-                   
+                -->
             </div>
+            
+            <!-- Aplicação da tabela de produtos/empresas -->
             <div class="prod-table-app" id="product-table-app">
+                <!-- Controles da tabela (filtros) -->
                 <div class="prod-table-handler">
+                    <!-- Filtro de empresa -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
@@ -126,10 +168,12 @@
                             </h3>
                             <select class="prod-select prod-js-handle-table prod-js-filter" id="prod-filter-brand">
                                 <option value="all">Todas</option>
+                                <!-- Opções adicionais serão geradas via JavaScript -->
                             </select>
                         </div>
                     </div>
 
+                    <!-- Filtro de busca por ID -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
@@ -140,7 +184,7 @@
                         </div>
                     </div>
 
-                    <!-- HTML do dropdown modificado - Agora é um filtro de integrações -->
+                    <!-- Filtro de integrações -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
@@ -148,16 +192,18 @@
                             </h3>
                             <select class="prod-select prod-js-handle-table" id="prod-integration-filter">
                                 <option value="all">Todas</option>
-                                <option value="concilia">Concilia Cartão</option>
-                                <option value="integra">Integra Mister</option>
+                                <option value="sieg">Integração SIEG</option>
+                                <option value="bancaria">Integração Bancária</option>
+                                <option value="cartao">Cartão (Getnet/Rede/Cielo)</option>
                             </select>
                         </div>
                     </div>
 
+                    <!-- Filtro de status de tickets -->
                     <div class="prod-table-handler-dropdown-cell">
                         <div class="prod-dropdown">
                             <h3 class="prod-dropdown-heading">
-                                <i class="fas fa-filter"></i> Cartão
+                                <i class="fas fa-filter"></i> Tickets
                             </h3>
                             <select class="prod-select prod-js-handle-table" id="prod-status-filter">
                                 <option value="all">Todas</option>
@@ -167,10 +213,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.prod-table-handler -->
 
+                <!-- Wrapper da tabela com scroll vertical -->
                 <div class="prod-table-wrapper">
+                    <!-- Tabela de empresas -->
                     <table class="prod-table" id="prod-table">
+                        <!-- Cabeçalho da tabela -->
                         <thead>
                             <tr class="prod-table-head">
                                 <th class="prod-table-cell prod-align-right">ID</th>
@@ -178,460 +226,41 @@
                                 <th class="prod-table-cell prod-align-left">CNPJ</th>
                                 <th class="prod-table-cell prod-align-left">Banco</th>
                                 <th class="prod-table-cell prod-align-left">Integrações</th>
-                                <!-- Mudado de 'prod-align-right' para 'prod-align-left' -->
-                                <th class="prod-table-cell prod-align-left">Data de Criação</th>
-                                <th class="prod-table-cell prod-align-left">Última tarefa</th>
-                                <th class="prod-table-cell prod-align-left">Concilia Cartão</th>
+                                <th class="prod-table-cell prod-align-left">Em teste...</th>
+                                <th class="prod-table-cell prod-align-left">Em teste...</th>
+                                <th class="prod-table-cell prod-align-center">Tickets</th>
                             </tr>
                         </thead>
 
+                        <!-- Corpo da tabela -->
                         <tbody>
                             <!-- Dados serão carregados via JavaScript -->
                         </tbody>
                     </table>
 
+                    <!-- Mensagem quando não há resultados -->
                     <div class="prod-no-results prod-hidden" id="prod-no-results">
                         <p class="prod-no-results-message">Nenhum resultado encontrado.</p>
                     </div>
-                    <!-- /#prod-no-results -->
                 </div>
-                <!-- /.prod-table-wrapper -->
             </div>
-            <!-- /.prod-table-app -->
         </div>
-        <!-- /.prod-container -->
-        <!-- Fim da Tabela de Produtos -->
     </section>
-    <!-- Scripts -->
+
+    <!-- Scripts de bibliotecas externas -->
     <script src="https://kit.fontawesome.com/766b3aafc5.js" crossorigin="anonymous"></script>
-    <!-- Importante: Usar apenas uma versão do jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    
+    <!-- Script Chart.js (removido se não estiver sendo usado) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    
+    <!-- Script principal da aplicação -->
     <script src="/painel.js"></script>
-
-    <!-- Script da tabela de produtos e menu -->
-    <script>
-
-        // Definindo os dados de empresas fora do documento ready
-        // Altere a estrutura de dados dos produtos para incluir o campo 'integracoes' com texto
-        const products = [
-            {
-                id: 1,
-                brand: "Mister Contador",
-                name: "10539433000173",
-                category: "Itaú",
-                price: 154000,
-                integracoes: "Integra Mister",  // Novo campo com texto
-                description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-                stocked: true,
-                created_at: "2025/01/25",
-                updated_at: "2020/8/20",
-                banks: ["Itaú", "Bradesco", "Santander", "Banco do Brasil", "Caixa"]
-            },
-            {
-                id: 2,
-                brand: "ENGETOTUS COMERCIO",
-                name: "19887163000166",
-                category: "Bradesco",
-                price: 120000,
-                integracoes: "Integra Mister",  // Novo campo com texto
-                stocked: false,
-                created_at: "2024/17/04",
-                updated_at: "2021/6/15",
-                banks: ["Nubank", "Inter", "C6 Bank", "BTG Pactual", "MercadoPago"]
-            },
-            {
-                id: 3,
-                brand: "Engenharia LTDA",
-                name: "81062945000130",
-                category: "Bradesco",
-                price: 124800,
-                integracoes: "Integra Mister",  // Novo campo com texto
-                stocked: false,
-                created_at: "2024/17/04",
-                updated_at: "2021/6/15",
-                banks: ["C6 Bank", "BTG Pactual", "MercadoPago"]
-            },
-            {
-                id: 4,
-                brand: "3 Irmãos LTDA",
-                name: "21576936000135",
-                category: "Bradesco",
-                price: 124800,
-                integracoes: "Integra Mister",  // Novo campo com texto
-                stocked: true,
-                created_at: "2024/17/04",
-                updated_at: "2021/6/15",
-                banks: ["Inter", "C6 Bank", "BTG Pactual", "MercadoPago"]
-            },
-            {
-                id: 5,
-                brand: "ENOK CONTABILIDADE",
-                name: "09619794000140",
-                category: "Bradesco",
-                price: "124800",
-                integracoes: "Integra Mister",  // Novo campo com texto
-                stocked: false,
-                created_at: "2024/17/04",
-                updated_at: "2021/6/15",
-                banks: ["MercadoPago", "Inter", "C6 Bank", "BTG Pactual", "MercadoPago"]
-            }
-        ];
-
-        // Função para inicializar o menu
-        function initMenu() {
-            let menu = document.querySelector(".menu");
-            let closeBtn = document.querySelector("#btn");
-            let searchBtn = document.querySelector(".bx-search");
-
-            // Função para alterar a aparência do botão do menu
-            function menuBtnChange() {
-                if (menu.classList.contains("open")) {
-                    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-                } else {
-                    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-                }
-            }
-
-            closeBtn.addEventListener("click", () => {
-                menu.classList.toggle("open");
-                menuBtnChange();
-            });
-
-            searchBtn.addEventListener("click", () => {
-                menu.classList.toggle("open");
-                menuBtnChange();
-            });
-        }
-
-        // Aguarde o documento estar pronto
-        $(document).ready(function () {
-            // Inicializar menu
-            initMenu();
-
-            // Inicializar a aplicação da tabela de produtos
-            setTimeout(function () {
-                new ProductTableApp($('#product-table-app'), products);
-            }, 100); // Pequeno atraso para garantir que tudo está carregado
-        });
-
-        // Variáveis para controle dos carrosséis nas células
-        let cellCarouselCurrentIndexes = {};
-
-        // Funções para controlar os carrosséis nas células da tabela
-        function initCellCarousel(index) {
-            cellCarouselCurrentIndexes[index] = 0;
-            updateCellCarouselPosition(index);
-            updateActiveSlide(index);
-        }
-
-        function prevSlide(index) {
-            cellCarouselCurrentIndexes[index]--;
-
-            // Se passar do início, vai para o final
-            const totalSlides = products[index]?.banks?.length || 5;
-            if (cellCarouselCurrentIndexes[index] < 0) {
-                cellCarouselCurrentIndexes[index] = totalSlides - 1;
-            }
-
-            updateCellCarouselPosition(index);
-            updateActiveSlide(index);
-        }
-
-        function nextSlide(index) {
-            cellCarouselCurrentIndexes[index]++;
-
-            // Se passar do final, volta para o início
-            const totalSlides = products[index]?.banks?.length || 5;
-            if (cellCarouselCurrentIndexes[index] >= totalSlides) {
-                cellCarouselCurrentIndexes[index] = 0;
-            }
-
-            updateCellCarouselPosition(index);
-            updateActiveSlide(index);
-        }
-
-        function updateCellCarouselPosition(index) {
-            const track = document.getElementById(`carousel-track-${index}`);
-            if (track) {
-                // Calcula posição baseada na largura fixa de cada slide (60px)
-                const slideWidth = 60;
-                const position = -cellCarouselCurrentIndexes[index] * slideWidth;
-                track.style.transform = `translateX(${position}px)`;
-            }
-        }
-
-        function updateActiveSlide(index) {
-            // Remove a classe ativa de todos os slides neste carrossel
-            const slides = document.querySelectorAll(`#carousel-${index} .cell-carousel-slide`);
-            slides.forEach(slide => slide.classList.remove('active'));
-
-            // Adiciona a classe ativa ao slide atual
-            // Para 2 slides visíveis, o primeiro dos dois deve ser ativo
-            const activeSlideIndex = cellCarouselCurrentIndexes[index];
-            const activeSlide = document.getElementById(`slide-${index}-${activeSlideIndex}`);
-            if (activeSlide) {
-                activeSlide.classList.add('active');
-            }
-        }
-
-        class ProductTableApp {
-            constructor($el, dataOrUrl) {
-                this.initState();
-
-                if (Array.isArray(dataOrUrl)) {
-                    this.state.isLoaded = true;
-                    this.state.products = dataOrUrl;
-                    this.defineElements($el, this.state.products);
-                    this.render(this.state.products);
-                    this.bindEvents();
-                } else {
-                    this.fetchJson(dataOrUrl).then(
-                        (res) => {
-                            this.state.isLoaded = true;
-                            this.state.products = res;
-                            this.defineElements($el, this.state.products);
-                            this.render(this.state.products);
-                            this.bindEvents();
-                        },
-                        (jqXHR) => {
-                            this.state.err = jqXHR;
-                            console.error(`Error loading data: ${this.state.err.responseText}`);
-                        }
-                    );
-                }
-            }
-
-            // Modificações no método initState para adicionar o filtro de integrações
-initState() {
-    this.state = { 
-        isLoaded: false, 
-        products: [], 
-        err: null,
-        filters: {
-            brand: 'all',
-            bank: 'all',
-            status: 'all',
-            integration: 'all', // Novo filtro de integração
-            sortBy: 'none',
-            idSearch: ''
-        }
-    };
-}
-
-// Modificações no método defineElements para referenciar o elemento do filtro
-defineElements($el, products) {
-    // Extract unique brands and banks
-    const brands = ['all', ...new Set(products.map(p => p.brand))];
-    const banks = ['all', ...new Set(products.flatMap(p => p.banks))];
-
-    this.$el = $el;
-    this.$tbody = this.$el.find('tbody');
-    this.$noResults = this.$el.find('#prod-no-results');
-
-    // Brand filter
-    this.$filterBrand = this.$el.find('#prod-filter-brand')
-        .html(brands.map(brand => `<option value="${brand}">${brand}</option>`).join(''));
-
-    // Bank filter
-    this.$filterBank = this.$el.find('#prod-filter-category')
-        .html(banks.map(bank => `<option value="${bank}">${bank}</option>`).join(''));
-
-    // Other elements
-    this.$sortBy = this.$el.find('#prod-sort-by');
-    this.$statusFilter = this.$el.find('#prod-status-filter');
-    this.$integrationFilter = this.$el.find('#prod-integration-filter'); // Novo filtro de integração
-    this.$idSearch = this.$el.find('#prod-id-search');
-}
-
-// Modificações no método bindEvents para responder às mudanças no filtro
-bindEvents() {
-    // Add event listeners to all filter elements
-    this.$filterBrand.on('change', () => {
-        this.state.filters.brand = this.$filterBrand.val();
-        this.applyFilters();
-    });
-
-    this.$filterBank.on('change', () => {
-        this.state.filters.bank = this.$filterBank.val();
-        this.applyFilters();
-    });
-
-    this.$sortBy.on('change', () => {
-        this.state.filters.sortBy = this.$sortBy.val();
-        this.applyFilters();
-    });
-
-    this.$statusFilter.on('change', () => {
-        this.state.filters.status = this.$statusFilter.val();
-        this.applyFilters();
-    });
-
-    // Novo listener para o filtro de integração
-    this.$integrationFilter.on('change', () => {
-        this.state.filters.integration = this.$integrationFilter.val();
-        this.applyFilters();
-    });
-
-    this.$idSearch.on('input', () => {
-        this.state.filters.idSearch = this.$idSearch.val().trim();
-        this.applyFilters();
-    });
-}
-
-// Modificações no método applyFilters para aplicar o filtro de integração
-applyFilters() {
-    let filteredProducts = [...this.state.products];
-
-    // Brand filter
-    if (this.state.filters.brand !== 'all') {
-        filteredProducts = filteredProducts.filter(p => p.brand === this.state.filters.brand);
-    }
-
-    // Bank filter
-    if (this.state.filters.bank !== 'all') {
-        filteredProducts = filteredProducts.filter(p => p.banks.includes(this.state.filters.bank));
-    }
-
-    // Status filter
-    if (this.state.filters.status === 'active') {
-        filteredProducts = filteredProducts.filter(p => p.stocked === true);
-    } else if (this.state.filters.status === 'inactive') {
-        filteredProducts = filteredProducts.filter(p => p.stocked === false);
-    }
-
-    // Novo filtro de integração
-    if (this.state.filters.integration === 'concilia') {
-        filteredProducts = filteredProducts.filter(p => p.integracoes === "Concilia Cartão");
-    } else if (this.state.filters.integration === 'integra') {
-        filteredProducts = filteredProducts.filter(p => p.integracoes === "Integra Mister");
-    } 
-
-    // ID Search filter
-    if (this.state.filters.idSearch) {
-        filteredProducts = filteredProducts.filter(p => 
-            p.id.toString().includes(this.state.filters.idSearch)
-        );
-    }
-
-    // Sorting
-    switch(this.state.filters.sortBy) {
-        case 'created_at':
-            filteredProducts.sort((a, b) => 
-                moment(a.created_at, 'YYYY/MM/DD').valueOf() - 
-                moment(b.created_at, 'YYYY/MM/DD').valueOf()
-            );
-            break;
-        case 'updated_at':
-            filteredProducts.sort((a, b) => 
-                moment(a.updated_at, 'YYYY/MM/DD').valueOf() - 
-                moment(b.updated_at, 'YYYY/MM/DD').valueOf()
-            );
-            break;
-    }
-
-    // Render filtered and sorted results
-    this.render(filteredProducts);
-}
-
-            // Rest of the existing methods remain the same (render, fetchJson, etc.)
-            render(products) {
-                const twoSpace = '&nbsp;&nbsp;';
-
-                if (!this.state.isLoaded) {
-                    this.$tbody.html('<div>Carregando...</div>');
-                    return;
-                }
-
-                this.$tbody.html(
-                    products.map(
-                        (product, index) =>
-                            `<tr class="prod-table-row" data-key="${product.id}" style="height: 70px;">
-                    <td class="prod-table-cell prod-align-right">${product.id}</td>
-                    <td class="prod-table-cell prod-align-left">${product.brand}</td>
-                    <td class="prod-table-cell prod-align-left">${product.name}</td>
-                    <td class="prod-table-cell prod-align-left" style="display: flex; justify-content: left; align-items: center; height: 70px;">
-                        <button class="cell-carousel-btn prev" onclick="prevSlide(${index})">&lt;</button>
-                        <div class="cell-carousel" id="carousel-${index}">
-                            <div class="cell-carousel-track" id="carousel-track-${index}">
-                                ${product.banks.map((bank, bankIndex) => {
-                                // Função para obter a URL do logo do banco
-                                const getBankLogoUrl = (bankName) => {
-                                    const bankLogos = {
-                                        "Itaú": "https://logodownload.org/wp-content/uploads/2014/05/itau-logo-1-1.png",
-                                        "Bradesco": "https://logodownload.org/wp-content/uploads/2018/09/bradesco-logo-1.png",
-                                        "Santander": "https://play-lh.googleusercontent.com/g_QDzrOlw8Belx8qb47fUu0MPL6AVFzDdbOz_NJZYQDNLveHYxwiUoe09Wvkxf-_548q=w240-h480-rw",
-                                        "Banco do Brasil": "https://play-lh.googleusercontent.com/1-aNhsSPNqiVluwNGZar_7F5PbQ4u1zteuJ1jumnArhe8bfYHHaVwu4aVOF5-NAmLaA=w240-h480-rw",
-                                        "Caixa": "https://play-lh.googleusercontent.com/ubV0x2kGJIEe10shxuFnH9Cy21OgHARwVUZ89nyE0YOZN9c25ov_dyHdk1rMgbPvoDI=w240-h480-rw",
-                                        "Nubank": "https://logodownload.org/wp-content/uploads/2019/08/nubank-logo-1.png",
-                                        "Inter": "https://play-lh.googleusercontent.com/DABQ3z4xA93QNsK9wqR2LdnamoDHkaKc-h1AueqJrVE7pP9GkIvZqf_URfxOIiNbFyzK=w240-h480-rw",
-                                        "C6 Bank": "https://play-lh.googleusercontent.com/qYXhGgBxFLr5xgnv0AGhqW9v7tyedb_i5AVoebI6pow5pWPNZH1qEHnslmSHNkVpB-g=w240-h480-rw",
-                                        "BTG Pactual": "https://play-lh.googleusercontent.com/0y84dcSeljAid36WeCs-9FWY4fENzxVilh1TS9G4jV30VHsFHJ3lGofMeS3w5hpvRk0D=s48-rw",
-                                        "MercadoPago": "https://play-lh.googleusercontent.com/nvcgc4oLlZihaCigkzhfjiB1DYBe_CTx_u8Xy3Bvj_JyWKg5FQK-QLKKFIm2o_Ggmdw=w240-h480-rw"
-                                    };
-
-                                    return bankLogos[bankName] || `/api/placeholder/50/30`;
-                                };
-
-                                return `
-                                    <div class="cell-carousel-slide" id="slide-${index}-${bankIndex}">
-                                        <img src="${getBankLogoUrl(bank)}" alt="${bank}" title="${bank}" onerror="this.src='/api/placeholder/50/30'; this.onerror='';" />
-                                    </div>
-                                    `;
-                            }).join('')}
-                            </div>
-                        </div>
-                        <button class="cell-carousel-btn next" onclick="nextSlide(${index})">&gt;</button>
-                    </td>
-                    <td class="prod-table-cell prod-align-left">${product.integracoes || 'N/A'}</td>
-                    <td class="prod-table-cell prod-align-left">${product.created_at}</td>
-                    <td class="prod-table-cell prod-align-left">${product.updated_at}</td>
-                    <td class="prod-table-cell prod-align-left">
-                    ${product.stocked
-                                ? `<span style="color: #00cc00; font-weight: bold;"><i class="fas fa-check-circle"></i>${twoSpace}Ativo</span>`
-                                : `<span style="color: #ff0000; font-weight: bold;"><i class="fas fa-minus-circle"></i>${twoSpace}Inativo</span>`
-                            }
-                    </td>
-                </tr>`,
-                    ),
-                );
-
-                products.length === 0
-                    ? this.$noResults.removeClass('prod-hidden')
-                    : this.$noResults.addClass('prod-hidden');
-
-                // Inicializar os carrosséis após renderizar
-                products.forEach((_, index) => {
-                    initCellCarousel(index);
-                });
-            }
-
-            fetchJson(url) {
-                return $.ajax({
-                    url: url,
-                    dataType: 'json',
-                });
-            }
-        }
-
-        // Update the document ready script to use the improved class
-        $(document).ready(function () {
-            // Inicializar menu
-            initMenu();
-
-            // Inicializar a aplicação da tabela de produtos
-            setTimeout(function () {
-                new ProductTableApp($('#product-table-app'), products);
-            }, 100); // Pequeno atraso para garantir que tudo está carregado
-        });
-
-    </script>
 </body>
-
 </html>
