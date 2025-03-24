@@ -344,11 +344,12 @@ section[role="application"] {
 }
 
 
+
+
+
 .list {
     margin: 2rem;
 }
-
-
 /* Estilos para o carrossel na célula da tabela */
 .cell-carousel {
     width: 60px;
@@ -395,6 +396,7 @@ section[role="application"] {
     /* Imagem um pouco maior */
     object-fit: contain;
     border-radius: 5px;
+    box-shadow: 1px 1px 1px #828283;
 }
 
 .cell-carousel-btn {
@@ -432,6 +434,7 @@ section[role="application"] {
     border-radius: 5px;
     object-fit: contain;
     transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 1px 1px 1px #828283;
 }
 
 .integration-icon.active {
@@ -554,7 +557,6 @@ section[role="application"] {
     line-height: 2;
     cursor: pointer;
     background-color: #fff;
-    background-image: url(https://dl.dropbox.com/s/ru1dbh5omn3deeh/arrow.svg?dl=0);
     background-repeat: no-repeat;
     background-position: right 15px center;
     background-size: 10px 10px;
@@ -565,6 +567,23 @@ section[role="application"] {
     -moz-appearance: none;
     appearance: none;
 }
+
+.prod-js-handle-table{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 2;
+    cursor: pointer;
+    background-size: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 
 .prod-select::-ms-expand {
     display: none;
@@ -768,6 +787,70 @@ section[role="application"] {
 }
 
 
+/*Barra de progresso*/
+/* Estilos da barra de progresso */
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.progress-bar-bg {
+    flex: 1;
+    height: 18px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #47d147;
+    border-radius: 10px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.progress-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    min-width: 40px;
+    text-align: right;
+    transition: color 0.5s ease;
+}
+
+/* Cores para diferentes níveis de progresso */
+.progress-bar.low {
+    background-color: #ff4d4d; /* Vermelho para progresso baixo */
+}
+
+.progress-bar.medium {
+    background-color: #ffad33; /* Laranja para progresso médio */
+}
+
+.progress-bar.high {
+    background-color: #47d147; /* Verde para progresso alto */
+}
+
+/* Ajusta a célula da tabela que contém a barra de progresso */
+.prod-table-cell.prod-align-center {
+    vertical-align: middle;
+    padding: 8px;
+}
+
+/* Estilos para a barra de progresso em linhas alternadas da tabela (opcional) */
+.prod-table-row:nth-child(even) .progress-container {
+    background-color: transparent;
+}
+
+.prod-table-row:nth-child(odd) .progress-container {
+    background-color: transparent;
+}
+
+
 
 /* Estilos para o popup de notificação */
 .notification-popup {
@@ -887,3 +970,5 @@ section[role="application"] {
 .notification-overlay.visible {
     display: block;
 }
+
+
