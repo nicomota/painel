@@ -201,18 +201,12 @@
                         </div>
                     </div>
 
-                    <!-- Filtro de status de tickets -->
-                    <div class="prod-table-handler-dropdown-cell">
-                        <div class="prod-dropdown">
-                            <h3 class="prod-dropdown-heading">
-                                <i class="fas fa-filter"></i> Tickets
-                            </h3>
-                            <select class="prod-select prod-js-handle-table" id="prod-status-filter">
-                                <option value="all">Todas</option>
-                                <option value="active">Ativo</option>
-                                <option value="inactive">Inativo</option>
-                            </select>
-                        </div>
+                    <!-- Calendário -->
+                    <div class="prod-dropdown">
+                        <h3 class="prod-dropdown-heading">
+                            <i class="fas fa-calendar"></i> Período
+                        </h3>
+                        <input type="month" class="prod-js-handle-table" id="prod-date-filter">
                     </div>
                 </div>
 
@@ -224,11 +218,11 @@
                         <thead>
                             <tr class="prod-table-head">
                                 <th class="prod-table-cell prod-align-right">ID</th>
-                                <th class="prod-table-cell prod-align-left">Empresa</th>
+                                <th class="prod-table-cell prod-align-left">Empresas</th>
                                 <th class="prod-table-cell prod-align-left">CNPJ</th>
-                                <th class="prod-table-cell prod-align-left">Banco</th>
+                                <th class="prod-table-cell prod-align-left">Bancos</th>
                                 <th class="prod-table-cell prod-align-left">Integrações</th>
-                                <th class="prod-table-cell prod-align-center">Em teste...</th>
+                                <th class="prod-table-cell prod-align-center">Progresso de Conciliação Mensal</th>
                                 <th class="prod-table-cell prod-align-center">Em teste...</th>
                                 <th class="prod-table-cell prod-align-center">Tickets</th>
                             </tr>
