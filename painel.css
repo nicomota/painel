@@ -608,6 +608,7 @@ section[role="application"] {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 650px;
 }
 
 .prod-table-app {
@@ -988,3 +989,4 @@ section[role="application"] {
     transform: scale(1.05); /* Pequeno zoom */
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
   }
+

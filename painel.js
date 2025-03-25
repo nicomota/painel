@@ -42,7 +42,7 @@ const products = [
         brand: "Mister Contador",
         name: "10539433000173",
         stocked: true,
-        updated_at: "",
+        updated_at: "10/2025",
         lastUpdate: "2024-03-15", // Data para filtro
         banks: ["Itaú", "Santander", "Banco do Brasil", "Caixa"],
         integracoes: {
@@ -134,7 +134,7 @@ const products = [
             "Inter": 40,
             "C6 Bank": 65,
             "BTG Pactual": 25,
-            "MercadoPago": 95
+            "MercadoPago": 100
         }
     },
 ];
@@ -227,6 +227,16 @@ const carouselManager = {
             if (progressContainer) {
                 progressContainer.title = `Lançamentos Conciliados ${selectedBank}: ${progress}%`;
             }
+            
+            // Atualiza a visibilidade do ícone de download com base no progresso
+            const downloadCell = document.querySelector(`tr[data-key="${product.id}"] td:nth-child(8)`);
+            if (downloadCell) {
+                if (progress === 100) {
+                    downloadCell.innerHTML = '<i class="bx bxs-download" style="cursor: pointer; font-size: 20px; color: #2196F3;"></i>';
+                } else {
+                    downloadCell.innerHTML = '';
+                }
+            }
         }
     }
 };
@@ -296,12 +306,6 @@ class ProductTableApp {
             });
         });
 
-        // Evento para o filtro de data
-        this.$dateFilter.on('change', () => {
-            this.state.filters.date = this.$dateFilter.val();
-            this.applyFilters();
-        });
-
         // Evento para busca por ID
         this.$idSearch.on('input', () => {
             this.state.filters.idSearch = this.$idSearch.val().trim();
@@ -330,7 +334,6 @@ class ProductTableApp {
             );
         }
 
-        // Filtro de data (novo)
         // Filtro de data (mês/ano)
         if (filters.date) {
             const selectedDate = new Date(filters.date + "-01"); // Adiciona o dia 01 para criar uma data válida
@@ -356,13 +359,6 @@ class ProductTableApp {
             );
         }
 
-        // Ordenação
-        if (filters.sortBy === 'updated_at') {
-            filteredProducts.sort((a, b) =>
-                moment(a.updated_at, 'YYYY/MM/DD').valueOf() -
-                moment(b.updated_at, 'YYYY/MM/DD').valueOf()
-            );
-        }
 
         // Renderiza os resultados filtrados
         this.render(filteredProducts);
@@ -384,6 +380,9 @@ class ProductTableApp {
                 const initialProgress = product.progressos?.[initialBank] || 0;
                 const progressClass = initialProgress < 30 ? 'low' : initialProgress < 70 ? 'medium' : 'high';
                 const hasNotification = Math.random() > 0.6; // Simulação de notificação
+                
+                // Verifica se o progresso é 100% para exibir o ícone de download
+                const showDownloadIcon = initialProgress === 100;
 
                 return `<tr class="prod-table-row" data-key="${product.id}" style="height: 70px;">
                     <td class="prod-table-cell prod-align-right">${product.id}</td>
@@ -432,7 +431,10 @@ class ProductTableApp {
                             <div class="progress-text" id="progress-text-${index}">${initialProgress}%</div>
                         </div>
                     </td>
-                    <td class="prod-table-cell prod-align-center style="width=200px">${product.updated_at}</td>
+                    <td class="prod-table-cell prod-align-center notification-cell"></td>
+                    <td class="prod-table-cell prod-align-center notification-cell">
+                    ${showDownloadIcon ? '<i class="bx bxs-download" style="cursor: pointer; font-size: 20px; color: #2196F3;"></i>' : ''}
+                    </td>
                     <td class="prod-table-cell prod-align-center notification-cell">
                         <div class="notification-bell">
                             <i class="fas fa-bell"></i>
@@ -539,15 +541,6 @@ class ProductTableApp {
                     popup.classList.remove('visible');
                 });
             });
-
-            // const viewBtn = popup.querySelector('#view-ticket');
-            // if (viewBtn) {
-            //     viewBtn.addEventListener('click', () => {
-            //         alert('Abrindo detalhes do ticket...');
-            //         overlay.classList.remove('visible');
-            //         popup.classList.remove('visible');
-            //     });
-            // }
         }
 
         // Evento de clique para os sinos de notificação
