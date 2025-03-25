@@ -608,7 +608,7 @@ section[role="application"] {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    min-height: 650px;
 }
 
 .prod-table-app {
@@ -670,7 +670,7 @@ section[role="application"] {
 /* Efeito hover com suave elevação */
 .prod-table-row:hover {
     background-color: #e8f0fe;
-    transform: translateY(-3px);
+    transform: translateY(-8px);
     box-shadow: 0 4px 6px rgba(22, 31, 160, 0.1);
     z-index: 1;
 }
@@ -971,4 +971,22 @@ section[role="application"] {
     display: block;
 }
 
+
+.botao-relatorio {
+    background: linear-gradient(45deg, #0047AB, #007BFF); /* Gradiente Azul */
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px; /* Mais arredondado */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .botao-relatorio:hover {
+    background: linear-gradient(45deg, #007BFF, #00A3FF); /* Muda gradiente */
+    transform: scale(1.05); /* Pequeno zoom */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+  }
 
