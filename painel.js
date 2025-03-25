@@ -51,7 +51,7 @@ const products = [
             cartao: true
         },
         progressos: {
-            "Itaú": 85,
+            "Itaú": 37,
             "Santander": 70,
             "Banco do Brasil": 100,
             "Caixa": 45
@@ -117,14 +117,31 @@ const products = [
             "MercadoPago": 95
         }
     },
+    {
+        id: 5,
+        brand: "3 Irmãos LTDA",
+        name: "21576936000135",
+        stocked: true,
+        updated_at: "",
+        lastUpdate: "2024-02-28",
+        banks: ["Inter", "C6 Bank", "BTG Pactual", "MercadoPago"],
+        integracoes: {
+            sieg: true,
+            bancaria: true,
+            cartao: false
+        },
+        progressos: {
+            "Inter": 40,
+            "C6 Bank": 65,
+            "BTG Pactual": 25,
+            "MercadoPago": 95
+        }
+    },
 ];
 
 // Objeto para armazenar os índices atuais dos carrosséis
 const cellCarouselCurrentIndexes = {};
-
-/**
- * Associação de nomes de bancos com seus logotipos
- */
+/* Associação de nomes de bancos com seus logotipos*/
 const getBankLogos = () => ({
     "Itaú": "https://logodownload.org/wp-content/uploads/2014/05/itau-logo-1-1.png",
     "Santander": "https://play-lh.googleusercontent.com/g_QDzrOlw8Belx8qb47fUu0MPL6AVFzDdbOz_NJZYQDNLveHYxwiUoe09Wvkxf-_548q=w240-h480-rw",
@@ -208,7 +225,7 @@ const carouselManager = {
             // Atualiza o título para mostrar detalhes ao passar o mouse
             const progressContainer = progressBar.closest('.progress-container');
             if (progressContainer) {
-                progressContainer.title = `Progresso de integração com ${selectedBank}: ${progress}%`;
+                progressContainer.title = `Lançamentos Conciliados ${selectedBank}: ${progress}%`;
             }
         }
     }
@@ -372,7 +389,7 @@ class ProductTableApp {
                     <td class="prod-table-cell prod-align-right">${product.id}</td>
                     <td class="prod-table-cell prod-align-left">${product.brand}</td>
                     <td class="prod-table-cell prod-align-left">${product.name}</td>
-                    <td class="prod-table-cell prod-align-left" style="display: flex; justify-content: left; align-items: center; height: 70px;">
+                    <td class="prod-table-cell prod-align-left" style="display: flex; justify-content: left; align-items: center; height: 70px; margin-top:9px">
                         <button class="cell-carousel-btn prev" onclick="carouselManager.prev(${index})">&lt;</button>
                         <div class="cell-carousel" id="carousel-${index}">
                             <div class="cell-carousel-track" id="carousel-track-${index}">
@@ -502,7 +519,7 @@ class ProductTableApp {
                 </div>
                 <div class="notification-actions">
                     <button class="notification-btn notification-btn-secondary" id="dismiss-notification">Ignorar</button>
-                    <button class="notification-btn notification-btn-secondary" id="view-ticket">Ver Ticket</button>
+                    <button class="notification-btn notification-btn-secondary" id="view-ticket"><a href="http://demo.mistercontador.com.br/onboard/tickets;periodo=22025;agenciabancariaId=4028">Ver Ticket</a></button>
                 </div>
             `;
 
@@ -523,14 +540,14 @@ class ProductTableApp {
                 });
             });
 
-            const viewBtn = popup.querySelector('#view-ticket');
-            if (viewBtn) {
-                viewBtn.addEventListener('click', () => {
-                    alert('Abrindo detalhes do ticket...');
-                    overlay.classList.remove('visible');
-                    popup.classList.remove('visible');
-                });
-            }
+            // const viewBtn = popup.querySelector('#view-ticket');
+            // if (viewBtn) {
+            //     viewBtn.addEventListener('click', () => {
+            //         alert('Abrindo detalhes do ticket...');
+            //         overlay.classList.remove('visible');
+            //         popup.classList.remove('visible');
+            //     });
+            // }
         }
 
         // Evento de clique para os sinos de notificação
