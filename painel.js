@@ -1,36 +1,36 @@
 /**
- * Inicializa o menu lateral
- * Configura os eventos de clique no botão de fechar e no botão de pesquisa
+ * Script para controle do menu lateral
  */
-function initMenu() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do menu
     const menu = document.querySelector(".menu");
-    const closeBtn = document.querySelector("#btn");
+    const btnMenu = document.querySelector("#btn");
     const searchBtn = document.querySelector(".bx-search");
-
-    if (!menu || !closeBtn || !searchBtn) return;
-
-    /**
-     * Altera a aparência do botão do menu dependendo do estado
-     */
-    function menuBtnChange() {
+    
+    // Função para alternar o estado do menu
+    function toggleMenu() {
+        menu.classList.toggle("open");
+        updateMenuButtonIcon();
+    }
+    
+    // Atualiza o ícone do botão do menu dependendo do estado
+    function updateMenuButtonIcon() {
         if (menu.classList.contains("open")) {
-            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            btnMenu.classList.replace("bx-menu", "bx-menu-alt-right");
         } else {
-            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            btnMenu.classList.replace("bx-menu-alt-right", "bx-menu");
         }
     }
-
-    // Adiciona eventos de clique
-    closeBtn.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        menuBtnChange();
-    });
-
-    searchBtn.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        menuBtnChange();
-    });
-}
+    
+    // Event listeners
+    if (btnMenu) {
+        btnMenu.addEventListener("click", toggleMenu);
+    }z
+    
+    if (searchBtn) {
+        searchBtn.addEventListener("click", toggleMenu);
+    }
+  });
 
 
 /**
