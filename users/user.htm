@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/senha/pass.css">
+    <title>Empresas Cadastradas</title>
+</head>
+<body>
+    <div class="menu">
+        <!-- Logo e botão de toggle do menu -->
+        <div class="logo">
+            <div class="logo_nome">Olá, Nícolas...!</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        
+        <!-- Itens do menu -->
+        <ul class="menu-lista">
+            <!-- Item de busca -->
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Procurar...">
+                <span class="tooltip">Procurar</span>
+            </li>
+            
+            <!-- Item de início -->
+            <li>
+                <a href="/index.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            
+            <!-- Item de cadastro de usuários -->
+            <li>
+                <a href="/users/user.htm">
+                    <i class='bx bxs-user-plus'></i>
+                    <span class="links_name">Cadastro de Usuários</span>
+                </a>
+                <span class="tooltip">Cadastro de Usuários</span>
+            </li>
+
+            <!-- Item de cadastro de Empresas -->
+            <li>
+                <a href="">
+                    <i class='bx bxs-business'></i>
+                    <span class="links_name">Cadastro de Empresas</span>
+                </a>
+                <span class="tooltip">Cadastro de Empresas</span>
+            </li>
+            
+            <!-- Item de contabilidade -->
+            <li>
+                <a href="/contabilidade/cont.html">
+                    <i class='bx bxs-keyboard'></i>
+                    <span class="links_name">Contabilide</span>
+                </a>
+                <span class="tooltip">Contabilide</span>
+            </li>
+            
+            <!-- Item de meus dados -->
+            <li>
+                <a href="/dados/dados.html">
+                    <i class='bx bxs-user-rectangle'></i>
+                    <span class="links_name">Meus Dados</span>
+                </a>
+                <span class="tooltip">Meus Dados</span>
+            </li>
+            
+            <!-- Item de senha -->
+            <li>
+                <a href="/senha/pass.html">
+                    <i class='bx bxs-lock-alt'></i>
+                    <span class="links_name">Senha</span>
+                </a>
+                <span class="tooltip">Senha</span>
+            </li>
+            
+            <!-- Item de sair -->
+            <li>
+                <a href="">
+                    <i class='bx bxs-exit'></i>
+                    <span class="links_name">Sair</span>
+                </a>
+                <span class="tooltip">Sair</span>
+            </li>
+            
+            <!-- Logo na parte inferior do menu -->
+            <div class="logo">
+                <img class="icone" src="/img/mc-horiz.png" style="width: 200px;" alt="Logo">
+            </div>
+        </ul>
+    </div>
+    <section class="home-section">
+        <!-- Cabeçalho da página -->
+        <header>
+            <!-- Botão de cursos -->
+            <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">
+                Meus Cursos
+            </button>
+            
+            <!-- Link de ajuda -->
+            <a href="" style="margin: 1rem; color: white;">Precisa de ajuda? Clique aqui...</a>
+            
+            <!-- Barra de pesquisa -->
+            <section role="search">
+                <form action="#" method="get">
+                    <div class="form-inline">
+                        <i class="icofont-search"></i>
+                        <input type="search" placeholder="Pesquisar">
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Seção de aplicação (filtros e botões) -->
+            <section role="application">
+                <nav class="navbar-top"></nav>
+                
+                <!-- Dropdown de Razão Social/CNPJ -->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Razão Social
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">CNPJ</a>
+                    </div>
+                </div>
+                
+                <!-- Botão de pesquisa -->
+                <button type="button" class="btn btn-primary" style="background-color: #ffffff; color: #011eda;">
+                    Pesquisar
+                </button>
+            </section>
+        </header>
+    
+<!-- Página de Cadastro de Usuários (apenas conteúdo interno, sem header) -->
+<div class="container-fluid mt-4">
+    <div class="card" style="background-color: #f7f8ff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="card-body" style="padding: 0;">
+            <div class="d-flex justify-content-between align-items-center mb-4" style="padding: 20px 20px 0 20px;">
+                <h5 class="card-title" style="color: #2c5697; font-weight: bold; margin-bottom: 0; font-size: 1rem;">Cadastro de usuários</h5>
+                <div class="d-flex">
+                    <div class="dropdown mr-2">
+                        <button class="btn dropdown-toggle btn-relatorios" type="button" 
+                                style="background-color: #2c5697; color: white; border-radius: 5px; font-size: 0.75rem;"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Relatórios de Acesso
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" style="font-size: 0.75rem;">Relatório Mensal</a>
+                            <a class="dropdown-item" href="#" style="font-size: 0.75rem;">Relatório por Usuário</a>
+                            <a class="dropdown-item" href="#" style="font-size: 0.75rem;">Histórico de Atividades</a>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group mr-2 pesquisa-usuarios" style="width: 300px;">
+                        <input type="text" class="form-control" placeholder="Pesquisar" 
+                              style="border-radius: 5px 0 0 5px; border: 1px solid #ddd; font-size: 0.75rem;">
+                        <div class="input-group-append">
+                            <button class="btn" type="button" 
+                                    style="background-color: white; border: 1px solid #ddd; border-left: none; border-radius: 0 5px 5px 0;">
+                                <i class="bx bx-search" style="color: #2c5697; font-size: 0.75rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-adicionar" type="button" 
+                            style="background-color: #2c5697; color: white; border-radius: 5px; font-size: 0.75rem;">
+                        <i class="bx bx-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table table-hover table-usuarios" style="border-collapse: separate; border-spacing: 0;">
+                    <thead>
+                        <tr style="background-color: #2532971a; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            <th style="color: #2c5697; font-size: 0.8rem;" class="sortable">
+                                Login <i class="bx bx-sort-up"></i>
+                            </th>
+                            <th style="color: #2c5697; font-size: 0.8rem;" class="sortable">
+                                Nome <i class="bx bx-sort-up"></i>
+                            </th>
+                            <th style="color: #2c5697; font-size: 0.8rem;" class="sortable">
+                                Perfil <i class="bx bx-sort-up"></i>
+                            </th>
+                            <th style="color: #2c5697; font-size: 0.8rem;" class="sortable">
+                                Criado em <i class="bx bx-sort-up"></i>
+                            </th>
+                            <th style="color: #2c5697; font-size: 0.8rem;" class="sortable">
+                                Modificado por <i class="bx bx-sort-up"></i>
+                            </th>
+                            <th style="color: #2c5697; font-size: 0.8rem;" class="sortable">
+                                Modificado em <i class="bx bx-sort-up"></i>
+                            </th>
+                            <th style="color: #2c5697; font-size: 0.8rem;">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 0.8rem;">alecindroCastilho@hotmail.com</td>
+                            <td style="font-size: 0.8rem;">ALECINDRO</td>
+                            <td>
+                                <span class="badge" style="background-color: #2c5697; color: white; font-weight: normal; padding: 4px 8px; border-radius: 5px; font-size: 0.7rem;">Ativo</span>
+                            </td>
+                            <td style="font-size: 0.8rem;">15/02/22 08:05</td>
+                            <td style="font-size: 0.8rem;">anonymousUser</td>
+                            <td style="font-size: 0.8rem;">19/01/24 15:11</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" style="background-color: #2c5697; border: none; border-radius: 5px; padding: 5px 12px; margin-right: 8px; font-size: 0.7rem; color: white;">
+                                        Editar <i class="bx bx-edit"></i>
+                                    </button>
+                                    <button class="btn" style="background-color: #6c757d; color: white; border: none; border-radius: 5px; padding: 5px 12px; font-size: 0.7rem;">
+                                        Desativar <i class="bx bx-x"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 0.8rem;">contadormister@gmail.com</td>
+                            <td style="font-size: 0.8rem;">OFICINA MISTER CONTADOR</td>
+                            <td>
+                                <span class="badge" style="background-color: #2c5697; color: white; font-weight: normal; padding: 4px 8px; border-radius: 5px; font-size: 0.7rem;">Ativo</span>
+                            </td>
+                            <td style="font-size: 0.8rem;">15/09/22 10:40</td>
+                            <td style="font-size: 0.8rem;">anonymousUser</td>
+                            <td style="font-size: 0.8rem;">15/05/24 09:13</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" style="background-color: #2c5697; border: none; border-radius: 5px; padding: 5px 12px; margin-right: 8px; font-size: 0.7rem; color: white;">
+                                        Editar <i class="bx bx-edit"></i>
+                                    </button>
+                                    <button class="btn" style="background-color: #6c757d; color: white; border: none; border-radius: 5px; padding: 5px 12px; font-size: 0.7rem;">
+                                        Desativar <i class="bx bx-x"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 0.8rem;">amanda.cardeal@gestaostratus.com</td>
+                            <td style="font-size: 0.8rem;">Amanda</td>
+                            <td>
+                                <span class="badge" style="background-color: #6c757d; color: white; font-weight: normal; padding: 4px 8px; border-radius: 5px; font-size: 0.7rem;">Inativo</span>
+                            </td>
+                            <td style="font-size: 0.8rem;">04/11/22 17:28</td>
+                            <td style="font-size: 0.8rem;">contadormister@gmail.com</td>
+                            <td style="font-size: 0.8rem;">22/02/23 11:37</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" style="background-color: #2c5697; border: none; border-radius: 5px; padding: 5px 12px; margin-right: 8px; font-size: 0.7rem; color: white;">
+                                        Editar <i class="bx bx-edit"></i>
+                                    </button>
+                                    <button class="btn btn-success" style="border: none; border-radius: 5px; padding: 5px 12px; font-size: 0.7rem;">
+                                        Ativar <i class="bx bx-plus"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 0.8rem;">lyonardotheo@gmail.com</td>
+                            <td style="font-size: 0.8rem;">Lynardo Domínio</td>
+                            <td>
+                                <span class="badge" style="background-color: #6c757d; color: white; font-weight: normal; padding: 4px 8px; border-radius: 5px; font-size: 0.7rem;">Inativo</span>
+                            </td>
+                            <td style="font-size: 0.8rem;">16/11/22 16:19</td>
+                            <td style="font-size: 0.8rem;">contadormister@gmail.com</td>
+                            <td style="font-size: 0.8rem;">16/01/23 13:42</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" style="background-color: #2c5697; border: none; border-radius: 5px; padding: 5px 12px; margin-right: 8px; font-size: 0.7rem; color: white;">
+                                        Editar <i class="bx bx-edit"></i>
+                                    </button>
+                                    <button class="btn btn-success" style="border: none; border-radius: 5px; padding: 5px 12px; font-size: 0.7rem;">
+                                        Ativar <i class="bx bx-plus"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/senha/pass.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</html>
+
