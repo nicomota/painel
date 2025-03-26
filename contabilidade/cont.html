@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/contabilidade/cont.css">
     <title>Empresas Cadastradas</title>
 </head>
@@ -26,7 +25,7 @@
                 <span class="tooltip">Procurar</span>
             </li>
             
-            <!-- Item de início -->
+            <!-- Itens de navegação -->
             <li>
                 <a href="/index.html">
                     <i class='bx bx-grid-alt'></i>
@@ -35,25 +34,31 @@
                 <span class="tooltip">Inicio</span>
             </li>
             
-            <!-- Item de cadastro de usuários -->
             <li>
-                <a href="">
+                <a href="#">
                     <i class='bx bxs-user-plus'></i>
                     <span class="links_name">Cadastro de Usuários</span>
                 </a>
                 <span class="tooltip">Cadastro de Usuários</span>
             </li>
+
+            <!-- Item de cadastro de Empresas -->
+            <li>
+                <a href="">
+                    <i class='bx bxs-business'></i>
+                    <span class="links_name">Cadastro de Empresas</span>
+                </a>
+                <span class="tooltip">Cadastro de Empresas</span>
+            </li>
             
-            <!-- Item de contabilidade -->
             <li>
                 <a href="/contabilidade/cont.html">
                     <i class='bx bxs-keyboard'></i>
-                    <span class="links_name">Contabilide</span>
+                    <span class="links_name">Contabilidade</span>
                 </a>
-                <span class="tooltip">Contabilide</span>
+                <span class="tooltip">Contabilidade</span>
             </li>
             
-            <!-- Item de meus dados -->
             <li>
                 <a href="/dados/dados.html">
                     <i class='bx bxs-user-rectangle'></i>
@@ -62,7 +67,6 @@
                 <span class="tooltip">Meus Dados</span>
             </li>
             
-            <!-- Item de senha -->
             <li>
                 <a href="/senha/pass.html">
                     <i class='bx bxs-lock-alt'></i>
@@ -71,11 +75,10 @@
                 <span class="tooltip">Senha</span>
             </li>
             
-            <!-- Item de sair -->
             <li>
-                <a href="">
+                <a href="#">
                     <i class='bx bxs-exit'></i>
-                  
+                    <span class="links_name">Sair</span>
                 </a>
                 <span class="tooltip">Sair</span>
             </li>
@@ -86,6 +89,7 @@
             </div>
         </ul>
     </div>
+    
     <section class="home-section">
         <!-- Cabeçalho da página -->
         <header>
@@ -95,7 +99,7 @@
             </button>
             
             <!-- Link de ajuda -->
-            <a href="" style="margin: 1rem; color: white;">Precisa de ajuda? Clique aqui...</a>
+            <a href="#" style="margin: 1rem; color: white;">Precisa de ajuda? Clique aqui...</a>
             
             <!-- Barra de pesquisa -->
             <section role="search">
@@ -109,8 +113,6 @@
             
             <!-- Seção de aplicação (filtros e botões) -->
             <section role="application">
-                <nav class="navbar-top"></nav>
-                
                 <!-- Dropdown de Razão Social/CNPJ -->
                 <div class="btn-group" role="group">
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
@@ -132,7 +134,7 @@
         <!-- Formulário de Cadastro da Contabilidade -->
         <div class="container">
             <div class="card" style="background-color: #f7f8ff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <div class="card-header" style="background-color: #f7f8ff; border-radius: 10px;color: #011eda; font-weight: bold; padding: 15px;">
+                <div class="card-header" style="background-color: #f7f8ff; border-radius: 10px; color: #011eda; font-weight: bold; padding: 15px;">
                     Cadastro da Contabilidade
                 </div>
                 <div class="card-body">
@@ -214,14 +216,10 @@
         </div>
     </section>
     
-        
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/contabilidade/cont.js"></script>
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/contabilidade/cont.js"></script>
+</body>
 </html>
-

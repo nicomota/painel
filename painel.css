@@ -257,7 +257,7 @@ header {
     gap: 0.5rem;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.466);
     padding: 1rem 2%;
-    background-image: linear-gradient(to left top, #021591, #0118aa, #031fd8, #011fe2, #011edd, #0118aa, #021591);
+    background-image: linear-gradient(to left top, #19029b, #1b01aa, #1b01aa, #1b01aa, #1b01aa, #1b01aa, #19029b);
     margin-top: -2.5%;
 }
 
