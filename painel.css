@@ -609,6 +609,11 @@ section[role="application"] {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 650px;
+
+    background-color: #f7f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
 }
 
 .prod-table-app {
@@ -660,17 +665,17 @@ section[role="application"] {
 }
 
 .prod-table-row:nth-child(even) {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 
 .prod-table-row:nth-child(odd) {
-    background-color: #eee;
+    background-color: #f7f8ff;
 }
 
 /* Efeito hover com suave elevação */
 .prod-table-row:hover {
     background-color: #e8f0fe;
-    transform: translateY(-8px);
+    transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(22, 31, 160, 0.1);
     z-index: 1;
 }
